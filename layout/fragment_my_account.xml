@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.myAccount.MyAccountFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <include layout="@layout/my_account_setting_layout"/>
+            <include layout="@layout/my_account_body_card_layout"/>
+            <include layout="@layout/my_account_selected_address_item_layout"/>
+            <include layout="@layout/my_account_footer_body_layout"/>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:elevation="3dp"
+    android:layout_marginBottom="16dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/my_account_image_placeholder_civ"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@mipmap/profile_placeholder"
+        app:civ_border_color="@color/colorWhite"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/my_account_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="amit kumar"
+        android:textColor="@color/colorBlack"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/my_account_image_placeholder_civ"
+        app:layout_constraintStart_toStartOf="@+id/my_account_image_placeholder_civ"
+        app:layout_constraintTop_toBottomOf="@+id/my_account_image_placeholder_civ" />
+
+    <TextView
+        android:id="@+id/my_account_mobile_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="+918789341233"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toEndOf="@+id/my_account_name_tv"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/my_account_name_tv"
+        app:layout_constraintTop_toBottomOf="@+id/my_account_name_tv" />
+
+    <TextView
+        android:id="@+id/my_account_email_address_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="amitanand9799@gmail.com"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/my_account_mobile_number"
+        app:layout_constraintStart_toStartOf="@+id/my_account_mobile_number"
+        app:layout_constraintTop_toBottomOf="@+id/my_account_mobile_number" />
+
+    <ImageView
+        android:id="@+id/my_account_setting_iv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/my_account_email_address_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/account_setting"
+        app:tint="@color/colorBlack" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

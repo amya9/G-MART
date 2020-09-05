@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:background="@color/colorWhite"
+    android:elevation="3dp"
+    android:paddingBottom="4dp">
+
+    <ImageView
+        android:id="@+id/my_wishlist_product_image_tv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/product" />
+
+    <TextView
+        android:id="@+id/my_wishlist_product_name_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Black Berry ZSM 25"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/my_wishlist_product_image_tv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/my_wishlist_product_offers_indicator_iv"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/my_wishlist_product_name_tv"
+        app:layout_constraintTop_toBottomOf="@+id/my_wishlist_product_name_tv"
+        app:srcCompat="@drawable/coupen"
+        app:tint="@color/errorColor" />
+
+    <TextView
+        android:id="@+id/my_wishlist_product_offers_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Offers Available"
+        android:textColor="@color/errorColor"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/my_wishlist_product_offers_indicator_iv"
+        app:layout_constraintStart_toEndOf="@+id/my_wishlist_product_offers_indicator_iv"
+        app:layout_constraintTop_toTopOf="@+id/my_wishlist_product_offers_indicator_iv" />
+
+    <LinearLayout
+        android:id="@+id/product_mini_rating_container_linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/quantity_boarder"
+        android:backgroundTint="@color/successColor"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        app:layout_constraintStart_toEndOf="@+id/my_wishlist_product_image_tv"
+        app:layout_constraintTop_toBottomOf="@+id/my_wishlist_product_offers_indicator_iv">
+
+        <TextView
+            android:id="@+id/product_mini_product_rating_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:text="4.5"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:padding="4dp"
+            android:src="@mipmap/star" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/product_mini_view_total_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="(8,450) rating"
+        app:layout_constraintBottom_toBottomOf="@+id/product_mini_rating_container_linearLayout"
+        app:layout_constraintStart_toEndOf="@+id/product_mini_rating_container_linearLayout"
+        app:layout_constraintTop_toTopOf="@+id/product_mini_rating_container_linearLayout" />
+
+    <TextView
+        android:id="@+id/my_wishlist_product_discounted_price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Rs.49,999/-"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/my_wishlist_product_image_tv"
+        app:layout_constraintTop_toBottomOf="@+id/product_mini_rating_container_linearLayout" />
+
+    <TextView
+        android:id="@+id/my_wishlist_product_original_price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Rs.59,999"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/my_wishlist_product_discounted_price_tv"
+        app:layout_constraintStart_toEndOf="@+id/my_wishlist_product_discounted_price_tv"
+        app:layout_constraintTop_toTopOf="@+id/my_wishlist_product_discounted_price_tv" />
+
+    <View
+        android:id="@+id/my_wishlist_product_original_price_cutline"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/resetBtn"
+        app:layout_constraintBottom_toBottomOf="@+id/my_wishlist_product_original_price_tv"
+        app:layout_constraintEnd_toEndOf="@+id/my_wishlist_product_original_price_tv"
+        app:layout_constraintStart_toStartOf="@+id/my_wishlist_product_original_price_tv"
+        app:layout_constraintTop_toTopOf="@+id/my_wishlist_product_original_price_tv" />
+
+    <LinearLayout
+        android:id="@+id/my_wishlist_remove_ll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/recyclerViewColor"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_wishlist_product_discounted_price_tv">
+
+
+        <LinearLayout
+            android:id="@+id/cart_move_product_from_cart_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/bin"
+                app:tint="#485F70" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:padding="10dp"
+                android:text="Remove item"
+                android:textColor="#485F70"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/my_wishlist_move_to_cart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                app:srcCompat="@mipmap/cart_black"
+                app:tint="#485F70" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="Move to cart"
+                android:textColor="#485F70"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider23"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/my_wishlist_remove_ll"
+        app:layout_constraintEnd_toEndOf="@+id/my_wishlist_remove_ll"
+        app:layout_constraintStart_toStartOf="@+id/my_wishlist_remove_ll"
+        app:layout_constraintTop_toTopOf="@+id/my_wishlist_remove_ll" />
+
+    <View
+        android:id="@+id/divider24"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/recyclerViewColor"
+        app:layout_constraintBottom_toTopOf="@+id/my_wishlist_remove_ll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_wishlist_product_discounted_price_tv" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

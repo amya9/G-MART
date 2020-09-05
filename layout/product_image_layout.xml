@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:elevation="3dp">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/product_image_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/product_image_tabLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_image_viewPager"
+        app:tabBackground="@drawable/dot_selector"
+        app:tabIndicatorHeight="0dp"
+        app:tabRippleColor="@null" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_product_to_wishList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/circle_background"
+        android:backgroundTint="@color/colorWhite"
+        android:clickable="true"
+        android:tint="#C6C6C6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="@color/colorPrimary"
+        app:srcCompat="@mipmap/my_wishlist" />
+
+    <TextView
+        android:id="@+id/product_name_mini_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Product title"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_image_tabLayout" />
+
+    <LinearLayout
+        android:id="@+id/product_mini_rating_container_linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/quantity_boarder"
+        android:backgroundTint="@color/successColor"
+        android:orientation="horizontal"
+        android:padding="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_name_mini_view">
+
+        <TextView
+            android:id="@+id/product_mini_product_rating_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:text="4.5"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:padding="8dp"
+            android:src="@mipmap/star" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/product_mini_view_total_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Total rating"
+
+        app:layout_constraintBottom_toBottomOf="@+id/product_mini_rating_container_linearLayout"
+        app:layout_constraintStart_toEndOf="@+id/product_mini_rating_container_linearLayout"
+        app:layout_constraintTop_toTopOf="@+id/product_mini_rating_container_linearLayout" />
+
+    <TextView
+        android:id="@+id/product_discounted_price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="RS.5999/-"
+        android:textColor="@color/colorBlack"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_mini_rating_container_linearLayout" />
+
+    <TextView
+        android:id="@+id/product_original_price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="rs.9999"
+        android:textAllCaps="true"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/product_discounted_price_tv"
+        app:layout_constraintStart_toEndOf="@+id/product_discounted_price_tv" />
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#BF2121"
+        app:layout_constraintBottom_toBottomOf="@+id/product_original_price_tv"
+        app:layout_constraintEnd_toEndOf="@+id/product_original_price_tv"
+        app:layout_constraintStart_toStartOf="@+id/product_original_price_tv"
+        app:layout_constraintTop_toTopOf="@+id/product_original_price_tv" />
+
+    <ImageView
+        android:id="@+id/product_cod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/cod_background"
+        android:padding="15dp"
+        android:src="@mipmap/cod"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/product_original_price_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_image_tabLayout" />
+
+    <TextView
+        android:id="@+id/product_cod_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Available"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/product_cod"
+        app:layout_constraintStart_toStartOf="@+id/product_cod"
+        app:layout_constraintTop_toBottomOf="@+id/product_cod" />
+
+    <LinearLayout
+        android:id="@+id/product_coupon_container_linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#FF3030"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_discounted_price_tv">
+
+        <TextView
+            android:id="@+id/product_coupon_redeem_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Check price after coupon redemption !"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/product_coupon_redeem_btn"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:background="@drawable/boarder_background"
+            android:text="redeem"
+            android:textColor="@color/colorWhite" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
